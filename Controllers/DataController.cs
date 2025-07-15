@@ -46,6 +46,10 @@ namespace TestApi.Controllers
         [SwaggerOperation(Summary = "新增學生", Description = "提供學生資料以新增學生")]
         public IActionResult AddStudent([FromBody] Student student)
         {
+            if (students.Any(s => s.Id == student.Id))
+            {
+                return Conflict($"學生 Id {student.Id} 已存在。");
+            }
             students.Add(student);
             return Ok(student);
         }

@@ -1,7 +1,7 @@
 {
-    "github.copilot.chat.commitMessageGeneration.instructions": [
-        {
-            "file": "ConventionalCommit.md"
-        }
-    ]
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": "ConventionalCommit.md"
+    }
+  ]
 }
