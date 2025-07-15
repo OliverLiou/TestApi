@@ -11,7 +11,7 @@ namespace TestApi.Controllers
         private static List<Course> courses = new List<Course>();
         private static List<Student> students = new List<Student>();
 
-        [HttpPost("course/add")]
+        [HttpPost("CourseAdd")]
         [SwaggerOperation(Summary = "新增課程", Description = "提供課程資料以新增課程")]
         public IActionResult AddCourse([FromBody] Course course)
         {
@@ -19,7 +19,7 @@ namespace TestApi.Controllers
             return Ok(course);
         }
 
-        [HttpPut("course/update/{id}")]
+        [HttpPut("CourseUpdate/{id}")]
         [SwaggerOperation(Summary = "修改課程", Description = "根據課程 ID 修改課程資料")]
         public IActionResult UpdateCourse(int id, [FromBody] Course updatedCourse)
         {
@@ -31,7 +31,7 @@ namespace TestApi.Controllers
             return Ok(course);
         }
 
-        [HttpDelete("course/delete/{id}")]
+        [HttpDelete("CourseDelete/{id}")]
         [SwaggerOperation(Summary = "刪除課程", Description = "根據課程 ID 刪除課程")]
         public IActionResult DeleteCourse(int id)
         {
@@ -42,7 +42,7 @@ namespace TestApi.Controllers
             return Ok();
         }
 
-        [HttpPost("student/add")]
+        [HttpPost("StudentAdd")]
         [SwaggerOperation(Summary = "新增學生", Description = "提供學生資料以新增學生")]
         public IActionResult AddStudent([FromBody] Student student)
         {
@@ -54,7 +54,7 @@ namespace TestApi.Controllers
             return Ok(student);
         }
 
-        [HttpPut("student/update/{id}")]
+        [HttpPut("StudentUpdate/{id}")]
         [SwaggerOperation(Summary = "修改學生", Description = "根據學生 ID 修改學生資料")]
         public IActionResult UpdateStudent(int id, [FromBody] Student updatedStudent)
         {
@@ -66,7 +66,7 @@ namespace TestApi.Controllers
             return Ok(student);
         }
 
-        [HttpDelete("student/delete/{id}")]
+        [HttpDelete("StudentDelete/{id}")]
         [SwaggerOperation(Summary = "刪除學生", Description = "根據學生 ID 刪除學生")]
         public IActionResult DeleteStudent(int id)
         {
